@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --builder-Red: hsl(0, 78%, 62%);
+    --supervisor-blue: hsl(180, 62%, 55%);
+    --karma-orange: hsl(34, 97%, 64%);
+    --calculator-blue: hsl(212, 86%, 64%);
+    --title-color: hsl(234, 12%, 34%);
+    --text-color: hsl(229, 6%, 66%)
+}
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+
+main{
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;  
+    text-align: center;
+}
+.subtitle{
+    color: var(--text-color);
+    font-weight: 400;
+}
+h1{
+    color: var(--title-color);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.main__text{
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 200;
+    font-size: 15px;
+    margin-bottom: 30px;
+    
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.content__div{
+    width: 300px;
+    height: 200px;
+    text-align: right;
+    padding: 1.5em;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 
+        0px 8px 16px rgba(0, 0, 0, 0.1),
+        0px 0px 8px rgba(0, 0, 0, 0.1), 
+        0px 8px 8px rgba(0, 0, 0, 0.041);
+    border-top: 3px solid var(--builder-Red);
+    h2{
+        font-size: 20px;
+        color: var(--title-color);
+        font-weight: 600;
+        text-align: left;
+    }
+    p{
+        font-size: 12px;
+        color: var(--text-color);
+        text-align: left;
+    }
+    img{
+        width: 50px;
+        height: 50px;
+        margin-top: 40px;
+    }
+}
+.supervisor{
+    border-top: 3px solid var(--supervisor-blue);
+}
+.karma{
+    border-top: 3px solid var(--karma-orange);
+}
+.calculator{
+    border-top: 3px solid var(--calculator-blue);
+}
+.content__center{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 997px) {
+    main{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .content{
+        flex-direction: column;
+    }
+}
